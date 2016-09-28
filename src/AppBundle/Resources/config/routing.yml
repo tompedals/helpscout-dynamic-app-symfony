@@ -1,0 +1,4 @@
+app_handler:
+    path: /
+    defaults:
+        _controller: app.action

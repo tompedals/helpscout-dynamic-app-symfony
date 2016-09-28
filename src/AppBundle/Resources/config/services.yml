@@ -1,0 +1,11 @@
+services:
+    app.handler:
+        class: App\AppBundle\AppHandler
+        arguments:
+            - '@twig'
+
+    app.action:
+        class: TomPedals\HelpScoutApp\AppAction
+        arguments:
+            - '@help_scout_app.request_factory'
+            - '@app.handler'

@@ -1,0 +1,24 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: services.yml }
+
+parameters:
+    locale: en
+
+framework:
+    secret: '%secret%'
+    router:
+        resource: '%kernel.root_dir%/config/routing.yml'
+        strict_requirements: ~
+    templating:
+        engines: ['twig']
+    default_locale: '%locale%'
+    trusted_hosts: ~
+    trusted_proxies: ~
+    fragments: ~
+    http_method_override: true
+    assets: ~
+
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'

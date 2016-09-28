@@ -1,0 +1,12 @@
+services:
+    # Creates the Help Scout App request
+    help_scout_app.request_factory:
+        class: TomPedals\HelpScoutApp\AppRequestFactory
+        arguments:
+            - '%help_scout_app_secret%'
+
+    # Resolve PSR-7 Response arguments in controllers with a Diactoros Response
+    argument_resolver.diactoros_response:
+        class: App\ArgumentResolver\DiactorosResponseResolver
+        tags:
+            - { name: controller.argument_value_resolver, priority: 50 }

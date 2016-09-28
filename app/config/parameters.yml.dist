@@ -1,0 +1,3 @@
+parameters:
+    secret: ThisTokenIsNotSoSecretChangeIt
+    help_scout_app_secret: secret
